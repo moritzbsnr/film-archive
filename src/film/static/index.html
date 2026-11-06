@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111312">
+    <meta
+      name="description"
+      content="Entdecke Filme, ihre Schauspieler und Drehbücher."
+    >
+    <title>Filmarchiv — Geschichten entdecken</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Filmarchiv Startseite">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 7.5h16v12H4zM4 10.5h16M8 7.5l2 3M14 7.5l2 3M6 4l2 3.5M12 4l2 3.5M18 4l2 3.5" />
+            </svg>
+          </span>
+          <span>film<span class="brand-light">archiv</span></span>
+        </a>
+        <span class="topbar-note"><span class="status-dot"></span> Deine Filmsammlung</span>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Das Kino im Überblick</p>
+            <h1 id="page-title">Geschichten,<br>die <span>bleiben.</span></h1>
+            <p class="hero-description">
+              Entdecke deine Filmsammlung. Finde Besetzungen und wirf einen Blick
+              hinter die Kulissen jedes Drehbuchs.
+            </p>
+          </div>
+          <div class="hero-aside" aria-label="Sammlungsübersicht">
+            <span class="hero-aside-label">Dein Archiv</span>
+            <span class="hero-aside-number" id="total-count">—</span>
+            <span class="hero-aside-caption">Filme in der Sammlung</span>
+            <span class="hero-star" aria-hidden="true">✳</span>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <span class="art-ring art-ring-one"></span>
+            <span class="art-ring art-ring-two"></span>
+            <span class="art-sun"></span>
+            <span class="art-horizon"></span>
+            <span class="art-caption">CINEMA<br>IS A FEELING</span>
+          </div>
+        </section>
+
+        <section class="collection" aria-labelledby="collection-title">
+          <div class="collection-heading">
+            <div>
+              <p class="eyebrow section-eyebrow">Deine Auswahl</p>
+              <h2 id="collection-title">Filmbibliothek <span class="heading-period">.</span></h2>
+            </div>
+            <span class="result-count" id="result-count" aria-live="polite"></span>
+          </div>
+
+          <div class="search-row">
+            <label class="search-box" for="film-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                <path d="m16 16 4.2 4.2"></path>
+              </svg>
+              <input
+                id="film-search"
+                type="search"
+                placeholder="Film, Schauspieler oder Drehbuch suchen …"
+                autocomplete="off"
+              >
+              <kbd>/</kbd>
+            </label>
+            <span class="search-hint">Durchsuche Titel, Cast und Drehbücher</span>
+          </div>
+
+          <div id="status-message" class="status-message" role="status" aria-live="polite">
+            <span class="loading-spinner" aria-hidden="true"></span>
+            Filme werden geladen …
+          </div>
+          <div id="movie-grid" class="movie-grid" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a class="brand footer-brand" href="/">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 7.5h16v12H4zM4 10.5h16M8 7.5l2 3M14 7.5l2 3M6 4l2 3.5M12 4l2 3.5M18 4l2 3.5" />
+            </svg>
+          </span>
+          <span>film<span class="brand-light">archiv</span></span>
+        </a>
+        <span>Für alle, die wissen wollen, wer hinter der Geschichte steckt.</span>
+      </footer>
+    </div>
+
+    <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Schließen">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18"></path>
+          </svg>
+        </button>
+        <div id="dialog-content"></div>
+      </div>
+    </dialog>
+  </body>
+</html>
