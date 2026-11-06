@@ -70,7 +70,7 @@ Mailing gestartet sein. Zur Konfiguration gibt es im jeweiligen Unterverzeichnis
 
 ## Applikationsserver
 
-Durch das Kommando `uv run patient` kann man den Server starten (siehe `project.scripts`
+Durch das Kommando `uv run film` kann man den Server starten (siehe `project.scripts`
 in `pyproject.toml`). Die Filmübersicht ist anschließend im Browser unter
 `https://localhost:8000/` erreichbar. Sie zeigt alle Filme an und ermöglicht die Suche
 nach Filmtiteln, Schauspielern und Drehbüchern; Besetzung und Drehbuchdetails lassen
@@ -87,7 +87,7 @@ gestartet ist:
 
 ## Bruno
 
-Mit _Bruno_ und der Collections in `extras\bruno\patient` kann nun die REST- und
+Mit _Bruno_ und der Projekt-Collection unter `extras\bruno` kann nun die REST- und
 GraphQL-Schnittstelle des Applikationsservers benutzt werden.
 
 ## Docker Image
