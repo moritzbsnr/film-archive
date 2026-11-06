@@ -16,10 +16,11 @@
 """Fixture für pytest: Neuladen der Datenbank."""
 
 # from common_api_test import ctx, timeout
+from ssl import create_default_context  # neu
+
 from common_api_test import certificate_path, timeout
 from httpx import AsyncClient, AsyncHTTPTransport
 from pytest import fixture
-from ssl import create_default_context  # neu
 
 ctx = create_default_context(cafile=certificate_path)  # neu
 
