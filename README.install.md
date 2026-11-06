@@ -71,7 +71,10 @@ Mailing gestartet sein. Zur Konfiguration gibt es im jeweiligen Unterverzeichnis
 ## Applikationsserver
 
 Durch das Kommando `uv run patient` kann man den Server starten (siehe `project.scripts`
-in `pyproject.toml`).
+in `pyproject.toml`). Die Filmübersicht ist anschließend im Browser unter
+`https://localhost:8000/` erreichbar. Sie zeigt alle Filme an und ermöglicht die Suche
+nach Filmtiteln, Schauspielern und Drehbüchern; Besetzung und Drehbuchdetails lassen
+sich direkt in der Übersicht öffnen.
 
 ## Tests mit pytest
 
