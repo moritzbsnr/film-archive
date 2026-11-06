@@ -281,11 +281,9 @@ function showScreenplay(film) {
 
   const details = document.createElement("dl");
   details.className = "detail-list";
-  addDetailItem(details, "Titel", screenplay.titel);
   addDetailItem(details, "Autor", screenplay.autor);
   addDetailItem(details, "Seitenzahl", `${screenplay.seitenzahl} Seiten`);
   addDetailItem(details, "Drehbuch-ID", screenplay.id);
-  addDetailItem(details, "Film", film.titel);
   addDetailItem(details, "Erscheinungsjahr", String(film.erscheinungsjahr).slice(0, 4));
   dialogContent.append(details);
   addDialogFooter(`Verfasst von ${screenplay.autor}`);
