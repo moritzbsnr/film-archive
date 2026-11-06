@@ -5,6 +5,34 @@ entstand als Gruppenarbeit im Fach *Software Engineering*. Die Beispieldomäne
 verknüpft Filme mit ihren Schauspielerinnen und Schauspielern sowie jeweils einem
 Drehbuch.
 
+## Die App im Überblick
+
+<p align="center">
+  <a href="https://github.com/user-attachments/assets/d4612b01-b778-4f3f-8c1d-cabca9ab8f5c">
+    <img src="https://github.com/user-attachments/assets/d4612b01-b778-4f3f-8c1d-cabca9ab8f5c" alt="Landing Page des Filmarchivs" width="800">
+  </a>
+</p>
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/11aabe46-f169-462f-8fb9-6143bf3c6ec7" alt="Filmdetails" width="100%">
+    </td>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/15fffe85-8aa5-4724-aa0a-c5bdfe6e1910" alt="Wer spielt mit?" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/e0fa34bf-2539-4ef3-8190-70f8912564eb" alt="Schauspieler" width="100%">
+    </td>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/2ccdde02-22e5-4ef0-80c4-60eef7bfb658" alt="Drehbuch" width="100%">
+    </td>
+  </tr>
+</table>
+
+
 ## Funktionen
 
 - Responsives Web-Frontend unter `/` mit Filmliste und Suche nach Filmtitel,
