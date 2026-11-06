@@ -26,6 +26,7 @@ from fastapi.middleware.gzip import (
     GZipMiddleware,  # https://fastapi.tiangolo.com/advanced/middleware/#gzipmiddleware
 )
 from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from loguru import logger
 from prometheus_fastapi_instrumentator import Instrumentator
 from pyinstrument import Profiler
@@ -78,6 +79,7 @@ __all__ = [
 
 
 TEXT_PLAIN: Final = "text/plain"
+STATIC_DIR: Final = Path(__file__).parent / "static"
 
 
 # --------------------------------------------------------------------------------------
@@ -166,6 +168,14 @@ if dev_db_populate:
 if dev_keycloak_populate:
     app.include_router(keycloak_populate_router, prefix="/dev")
 
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+
+
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
+def frontend() -> FileResponse:
+    """Die Filmübersicht im Browser ausliefern."""
+    return FileResponse(STATIC_DIR / "index.html")
+
 
 # --------------------------------------------------------------------------------------
 # G r a p h Q L
@@ -204,10 +214,8 @@ def favicon() -> FileResponse:
     :return: Response-Objekt mit favicon.ico
     :rtype: FileResponse
     """
-    src_path: Final = Path("src")
     file_name: Final = "favicon.ico"
-    favicon_path: Final = Path("patient") / "static" / file_name
-    file_path: Final = src_path / favicon_path if src_path.is_dir() else favicon_path
+    file_path: Final = STATIC_DIR / file_name
     logger.debug("file_path={}", file_path)
     return FileResponse(
         path=file_path,
