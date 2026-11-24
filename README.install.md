@@ -61,8 +61,20 @@ In einer _neuen_ Shell kann man dann z.B. `uv --version` aufrufen.
 ## Backend-Server
 
 Vor dem Start des Appservers müssen die Backend-Server für PostgreSQL, Keycloak und
-Mailing gestartet sein. Zur Konfiguration gibt es im jeweiligen Unterverzeichnis eine
-`ReadMe.md` Datei:
+Mailing laufen. Voraussetzung ist ein gestartetes _Docker Desktop_. Alle drei
+Backend-Server lassen sich gemeinsam starten:
+
+```shell
+    # Windows:
+    cd extras\compose\backend
+
+    # macOS/Linux:
+    cd extras/compose/backend
+
+    docker compose up
+```
+
+Zur Konfiguration gibt es im jeweiligen Unterverzeichnis eine `ReadMe.md` Datei:
 
 - PostgreSQL: `extras\compose\postgres\ReadMe.md`
 - Keycloak: `extras\compose\keycloak\ReadMe.md`
