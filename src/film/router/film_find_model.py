@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-"""Pydantic-Modelle für das Lesen von Patientendaten."""
+"""Pydantic-Modelle für das Lesen von Filmdaten."""
 
 from typing import Annotated
 lazy from datetime import date
@@ -101,7 +101,7 @@ class FilmResponseModel(BaseModel):
 
 
 class PageMetaModel(BaseModel):
-    """Metadaten für eine Page mit Patientendaten."""
+    """Metadaten für eine Page mit Filmdaten."""
 
     size: int
     number: int

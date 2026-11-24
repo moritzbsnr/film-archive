@@ -1,4 +1,4 @@
-"""Modul für persistente Patientendaten."""
+"""Modul für persistente Filmdaten."""
 
 from film.entity.base import Base
 from film.entity.drehbuch import Drehbuch

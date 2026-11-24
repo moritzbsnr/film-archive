@@ -15,12 +15,12 @@
 
 r"""Modul-Deklaration für das Projekt als oberster Namensraum bei Imports.
 
-Das Basis-Verzeichnis `patient` (direkt unter `src`) wird durch `__init__.py` als Modul
-für das Projekt deklariert, damit `patient` als oberster Namensraum bei den Imports
+Das Basis-Verzeichnis `film` (direkt unter `src`) wird durch `__init__.py` als Modul
+für das Projekt deklariert, damit `film` als oberster Namensraum bei den Imports
 verwendet werden kann.
 
 Außerdem kann mit dem Package Manager _uv_ das Modul als Skript aufgerufen werden:
-`uv run patient`. Siehe `project.scripts` in `pyproject.toml`.
+`uv run film`. Siehe `project.scripts` in `pyproject.toml`.
 
 Desweiteren wird für _uvicorn_ die 'Package-Level' Variable `app` initialisiert.
 Dann lautet der Aufruf:

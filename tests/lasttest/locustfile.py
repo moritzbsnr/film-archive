@@ -66,26 +66,12 @@ class GetUser(HttpUser):
     # https://docs.locust.io/en/stable/api.html#locust.User.weight
     @task(100)
     def get_id(self) -> None:
-        """GET-Requests mit einer ID als Pfadparameter."""
-        for patient_id in [1, 20, 30, 40, 50, 60]:
-            response = self.client.get(f"/rest/{patient_id}")
+        """GET-Requests mit einer Film-ID als Pfadparameter."""
+        for film_id in [1000, 1001, 1002, 1003, 1004]:
+            response = self.client.get(f"/rest/{film_id}")
             print(f"{response.json()['id']}")
 
-    @task(200)
-    def get_nachname(self) -> None:
-        """GET-Requests mit dem Nachnamen als Query-Parameter."""
-        for teil in ["a", "i", "n", "e", "v"]:
-            self.client.get("/rest", params={"nachname": teil})
-
-    @task(150)
-    def get_email(self) -> None:
-        """GET-Requests mit der Emailadresse als Query-Parameter."""
-        for email in [
-            "admin@acme.com",
-            "alice@acme.de",
-            "alice@acme.edu",
-            "alice@acme.ch",
-            "diana@acme.uk",
-            "eve@acme.jp",
-        ]:
-            self.client.get("/rest", params={"email": email})
+    @task(50)
+    def get_alle(self) -> None:
+        """GET-Request für alle Filme."""
+        self.client.get("/rest")

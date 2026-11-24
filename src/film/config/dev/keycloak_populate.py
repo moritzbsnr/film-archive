@@ -44,7 +44,7 @@ class KeycloakPopulateService:
     """Service für das Neuladen von Keycloak im Modus DEV."""
 
     def __init__(self, user_service: UserService) -> None:
-        """Konstruktor mit abhängigem PatientRepository."""
+        """Konstruktor mit abhängigem Repository."""
         self.user_service: UserService = user_service
 
     def populate(self) -> None:

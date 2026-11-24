@@ -32,7 +32,7 @@ project_root = Path(__file__).resolve().parents[3]
 cafile = (
     project_root
     / "src"
-    / "patient"
+    / "film"
     / "config"
     / "resources"
     / "tls"
@@ -56,20 +56,20 @@ with urlopen(token_request, context=ssl_context) as response:  # ruff: ignore[su
 
 index = 1
 while index >= 1:
-    patient_id: int
+    film_id: int
     if index % 2 == 0:
-        patient_id = 20
+        film_id = 1001
     elif index % 3 == 0:
-        patient_id = 30
+        film_id = 1002
     elif index % 5 == 0:
-        patient_id = 40
+        film_id = 1003
     elif index % 7 == 0:
-        patient_id = 50
+        film_id = 1004
     else:
-        patient_id = 1
-    print(f"id={patient_id}")
+        film_id = 1000
+    print(f"id={film_id}")
 
-    url = f"https://localhost:8000/rest/{patient_id}"
+    url = f"https://localhost:8000/rest/{film_id}"
     # https://docs.python.org/3/library/urllib.request.html#request-objects
     request = Request(
         url,
@@ -84,7 +84,7 @@ while index >= 1:
     try:
         response = urlopen(request, context=ssl_context)  # ruff: ignore[suspicious-url-open-usage]
     except HTTPError as e:
-        print(f"Fehler bei id={patient_id}: code={e.code}")
+        print(f"Fehler bei id={film_id}: code={e.code}")
         continue
 
     sleep(SLEEP_IN_SECONDS)

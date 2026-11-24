@@ -5,6 +5,15 @@ entstand als Gruppenarbeit im Fach *Software Engineering*. Die Beispieldomäne
 verknüpft Filme mit ihren Schauspielerinnen und Schauspielern sowie jeweils einem
 Drehbuch.
 
+## Herkunft des Projekts
+
+Grundlage ist das Referenzprojekt von Prof. Jürgen Zimmermann aus dem Modul
+*Software Engineering* an der Hochschule Karlsruhe (HKA). Wir haben es im Zweierteam
+analysiert und auf die eigene Domäne Film übertragen: Entities, Datenbankschema,
+REST- und GraphQL-Schnittstellen sowie die Tests wurden auf Filme, Schauspieler und
+Drehbücher umgestellt. Zusätzlich ist ein eigenes Web-Frontend (HTML, CSS, JavaScript)
+entstanden. Das Projekt steht wie die Vorlage unter der GPL-3.0-Lizenz.
+
 ## Die App im Überblick
 
 <p align="center">

@@ -282,7 +282,7 @@ def login_error_handler(_request: Request, err: LoginError) -> Response:
 def email_exists_error_handler(_request: Request, err: EmailExistsError) -> Response:
     """Exception-Handling für EmailExistsError.
 
-    :param err: Exception, falls die Emailadresse des neuen oder zu ändernden Patienten
+    :param err: Exception, falls die Emailadresse des neuen oder zu ändernden Datensatzes
         bereits existiert
     :return: Response mit Statuscode 422
     :rtype: Response
@@ -300,7 +300,7 @@ def username_exists_error_handler(
 ) -> Response:
     """Exception-Handling für UsernameExistsError.
 
-    :param err: Exception, falls der Username für den neuen Patienten bereits existiert
+    :param err: Exception, falls der Username für den neuen Benutzer bereits existiert
     :return: Response mit Statuscode 422
     :rtype: Response
     """

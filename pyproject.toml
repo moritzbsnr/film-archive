@@ -19,9 +19,9 @@
 
 # TOML (= Tom's Obvious Minimal Language) https://toml.io
 
-# Aufruf:   uv run patient
-#               uv run python -m patient
-#               uv run fastapi dev src/patient
+# Aufruf:   uv run film
+#               uv run python -m film
+#               uv run fastapi dev src/film
 #               uv run uvicorn src.film:app --http zttp --http2 --ssl-certfile=src\film\config\resources\tls\certificate.crt --ssl-keyfile=src\film\config\resources\tls\key.pem
 #
 #           curl -v --http2 --insecure `

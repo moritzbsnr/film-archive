@@ -89,7 +89,7 @@ def put(
     :rtype: Response
     :raises ValidationError: Falls es bei Pydantic Validierungsfehler gibt
     :raises EmailExistsError: Falls die neue Emailadresse bereits
-    :raises NotFoundError: Falls zur id kein Patient existiert
+    :raises NotFoundError: Falls zur id kein Film existiert
     :raises VersionOutdatedError: Falls die Versionsnummer nicht aktuell ist
     """
     if_match_value: Final = request.headers.get(IF_MATCH)

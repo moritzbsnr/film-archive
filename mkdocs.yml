@@ -18,7 +18,7 @@
 # https://www.mkdocs.org/user-guide
 # https://realpython.com/python-project-documentation-with-mkdocs
 
-site_name: patient
+site_name: film
 
 nav:
   - Start: index.md

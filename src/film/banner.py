@@ -101,7 +101,7 @@ def _routes_to_str(routes: list[BaseRoute]) -> str:
             table_entries.append(table_entry)
 
         elif isinstance(route, fastapi.routing._IncludedRouter):  # ruff: ignore[private-member-access]
-            # Routen durch APIRouter, z.B. /rest/{patient_id}
+            # Routen durch APIRouter, z.B. /rest/{film_id}
             router: Final = route.original_router
             prefix: Final = route.include_context.prefix
             table_entries_apirouter: Final = _apirouter_to_table_entries(router, prefix)
@@ -117,7 +117,7 @@ def banner(routes: list[BaseRoute]) -> None:
     """Banner für den Start des Servers."""
     figlet: Final = Figlet()
     print()
-    print(figlet.renderText("patient"))
+    print(figlet.renderText("film"))
 
     rechnername: Final = gethostname()
     # Default Isolation Level "read committed": Schreibsperren und keine Lesesperren
